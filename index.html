@@ -33,6 +33,7 @@
     <button onclick="showSection('social')">Social Media</button>
     <button onclick="showSection('news')">News</button>
     <button onclick="showSection('marketcap')">MarketCap</button>
+    <button onclick="showSection('platformer')">Platformer</button>
   </div>
 
   <!-- Homepage -->
@@ -257,6 +258,28 @@
       <button type="submit">Create Account</button>
       <button type="button" onclick="showSection('bank')">Cancel</button>
     </form>
+  </div>
+
+  <!-- Platformer Game Section -->
+  <div id="platformer" style="display:none;">
+    <div class="platformer-header-row">
+      <img src="assets/file_000000000348622fa8844bb639749a11.png" alt="Crypto Platformer Logo" class="platformer-logo" />
+      <span class="platformer-title">Crypto Platformer</span>
+    </div>
+    <div class="platformer-game-container">
+      <div class="platformer-info">
+        <h3>Collect Crypto Coins & Earn Real Money!</h3>
+        <p>Navigate through levels collecting crypto coins. Each coin you collect adds $5 to your bank account!</p>
+        <p><strong>Controls:</strong> Arrow Keys or WASD to move, Space to jump</p>
+      </div>
+      <div class="platformer-canvas-container">
+        <canvas id="platformerCanvas" width="800" height="400"></canvas>
+      </div>
+      <div class="platformer-controls">
+        <button class="platformer-btn" onclick="resetPlatformer()">Reset Game</button>
+        <button class="platformer-btn" onclick="showSection('results')">Back to Home</button>
+      </div>
+    </div>
   </div>
 
   <!-- Whitepaper: Solvex -->

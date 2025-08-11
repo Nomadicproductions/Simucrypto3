@@ -12,11 +12,11 @@ function randomFrom(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
 function randomDigits(len) { return Array.from({length: len}, () => Math.floor(Math.random()*10)).join(""); }
 
 // --- Section switching with bank/signup logic ---
-// Unified: includes all main app and whitepaper sections, and initializes each section as needed
+  // Unified: includes all main app and whitepaper sections, and initializes each section as needed
 function showSection(id) {
   [
     'results', 'bank', 'exchange', 'social', 'news', 'marketcap', 'signup',
-    'whitepaper-solvex', 'whitepaper-neurax', 'whitepaper-corechain'
+    'whitepaper-solvex', 'whitepaper-neurax', 'whitepaper-corechain', 'platformer'
   ].forEach(sec => {
     const el = document.getElementById(sec);
     if (el) el.style.display = 'none';
@@ -45,6 +45,11 @@ function showSection(id) {
     renderMarketcapList();
   } else {
     clearMarketcapIntervals();
+  }
+
+  // Initialize platformer game
+  if (id === "platformer") {
+    setTimeout(initPlatformer, 100);
   }
 }
 
